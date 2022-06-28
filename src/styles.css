@@ -1,0 +1,99 @@
+:root {
+    --primaryColor:#264653;
+    --secondaryColor: #2A9D8F;
+    --tertiaryColor: #E9C46A;
+    --extraColor: #F4A261;
+    --extraColor2: #E76F51;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--tertiaryColor);
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.main > h1 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 50px;
+    color: var(--primaryColor);
+}
+
+.main__grid {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.main__grid > .column > li{
+    list-style: none;
+    width: 75px;
+    height: 75px;
+    border: 2px solid var(--primaryColor);
+    margin-bottom: 5px;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.correct {
+    background-color: var(--secondaryColor);
+}
+
+.close {
+    background-color: var(--extraColor);
+}
+
+.wrong {
+    background-color: var(--extraColor2);
+}
+
+.main__keyboard > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    list-style: none;
+}
+
+.main__keyboard > ul > li > button {
+    width: min-content;
+    padding: 0 20px;
+    height: 55px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 550;
+    color: var(--primaryColor);
+    background-color: var(--secondaryColor);   
+}
+
+.main__keyboard > ul > li > button:hover {
+    cursor: pointer;
+}
+
+.main__keyboard > ul > li > .pressed {
+    color: var(--extraColor);
+    background-color: var(--extraColor2);
+}
+
+
